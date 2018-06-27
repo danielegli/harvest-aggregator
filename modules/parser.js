@@ -1,7 +1,7 @@
 const utilities = require('../modules/utilities');
 
 // Function to aggregate time entries for reporting
-const aggregateHours = (json) => {
+const aggregateHours = (json, dates, callback) => {
     //  Final array holding all aggregate data
     const data = [];
 
@@ -11,7 +11,7 @@ const aggregateHours = (json) => {
     data.push([]);
     data.push(...aggregateProjects(json));
 
-    return data;    
+    callback(null, data, dates);
 }
 
 const aggregateProjects = (json) => {

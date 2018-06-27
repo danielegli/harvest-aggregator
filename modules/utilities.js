@@ -1,5 +1,3 @@
-const columnify = require('columnify');
-
 const determineDates = (from, to) => {
     if (from && to) {
         return {
@@ -36,26 +34,6 @@ const sortObjectKeys = (obj) => {
     }, {});
 };
 
-const consolePrint = (arr) => {
-    console.log(columnify(
-        arr,
-        {
-            minWidth: 18,
-            // paddingChr: '.',
-            columns: ['Type', 'Hours'],
-            config: {
-                Hours: { align: 'right' },
-            },
-        }
-    ));
-};
-
-const consoleDates = (dates) => {
-    console.log('*************************************************');
-    console.log(`  From: ${dates.from}            To: ${dates.to} `);
-    console.log('*************************************************');
-};
-
 const stringToDate = (str) => {
     // str format should be yyyy-mm-dd. 
     const year = parseInt(str.split('-')[0]);
@@ -72,8 +50,6 @@ const dateToString = (date) => {
 return module.exports = {
     determineDates,
     sortObjectKeys,
-    consolePrint,
-    consoleDates,
     stringToDate,
     dateToString,
 }
