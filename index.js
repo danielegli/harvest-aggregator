@@ -5,9 +5,6 @@
         1. Replace .env variables with Harvest options
         2a. Call with no parameters to automatically calculate last paystub
         2b. Call with --from and --to parameters for manual time range
-
-    TODO: 
-        - Calculate OT by 40+ hours
 */
 
 /* 3rd Party Modules */

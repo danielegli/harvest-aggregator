@@ -21,7 +21,7 @@ const printDateHeader = (data, dates, callback) => {
     console.log(`  From: ${dates.from}            To: ${dates.to} `);
     console.log('*************************************************');
 
-    callback(null, arr, dates);
+    callback(null, data, dates);
 };
 
 module.exports = {
