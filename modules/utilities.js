@@ -16,7 +16,7 @@ const determineDates = (from, to) => {
     }
     // If currently in the second half of the month
     return {
-        from: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-01`,
+        from: `${new Date().getFullYear()}-${('0' + (new Date().getMonth() + 1).toString()).slice(-2)}-01`,
         to: new Date(new Date().getFullYear(), new Date().getMonth(), 15).toISOString().split('T')[0],
     };
 };
